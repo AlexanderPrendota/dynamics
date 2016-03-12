@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoClick" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKS-JZ-uYE">
+                                <rect key="frame" x="263" y="449" width="113" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="F8y-db-xDv"/>
+                                    <constraint firstAttribute="height" constant="32" id="QV6-pl-krR"/>
+                                </constraints>
+                                <state key="normal" title="Shot!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F9S-iN-akT"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oW3-8F-olM">
+                                <rect key="frame" x="157" y="0.0" width="324" height="404"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="KZk-7Y-sKN"/>
+                                    <constraint firstAttribute="height" constant="345" id="YTs-Bk-oR8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oW3-8F-olM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3Ts-xZ-h6u"/>
+                            <constraint firstItem="bKS-JZ-uYE" firstAttribute="top" secondItem="oW3-8F-olM" secondAttribute="bottom" constant="33" id="4ne-mR-5m6"/>
+                            <constraint firstItem="bKS-JZ-uYE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="8rh-FO-ONt"/>
+                            <constraint firstItem="bKS-JZ-uYE" firstAttribute="centerX" secondItem="oW3-8F-olM" secondAttribute="centerX" id="Clj-0M-Yr1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bKS-JZ-uYE" secondAttribute="bottom" constant="277" id="LQS-12-Bbi"/>
+                            <constraint firstItem="oW3-8F-olM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="184" id="qsQ-s3-ZPO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="oW3-8F-olM" id="WQ9-KT-4yq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="343"/>
+        </scene>
+    </scenes>
+</document>
